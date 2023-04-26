@@ -1,0 +1,15 @@
+name: Rinne RDP
+
+on:
+  workflow_dispatch:
+jobs:
+  RDP:
+    runs-on: windows-latest
+    steps:
+       - name: Download repository files
+         uses: actions/checkout@v1
+
+       - name: Khởi chạy RDP
+         run: powershell.exe -File rinne.ps1
+       - name: Đã xong!
+         run: echo Máy chủ đã hết thời gian chờ (Windows 2022 Rinne EDITION)
